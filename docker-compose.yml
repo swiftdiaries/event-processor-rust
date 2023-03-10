@@ -1,0 +1,10 @@
+version: "3"
+services:
+ ingestion:
+   build: .
+   network_mode: "host"
+   volumes:
+     - $HOME/.fluvio/config:/home/fluvio/.fluvio/config:ro
+     - $HOME/.kube:/home/fluvio/.kube:ro
+  # ports:
+  #   - "127.0.0.1:8080:8080"
